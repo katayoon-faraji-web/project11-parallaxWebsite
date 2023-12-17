@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="icon/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="icon/fontello-icons/css/fontello.css">
+    <style>
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+            scroll-behavior:  smooth;
+        }
+        *{
+            transition: .4s linear;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        swiper-container {
+            width: 100%;
+            height: 100%;
+            
+        }
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+
+        }
+        swiper-slide img {
+            object-fit: cover;
+            display: sw </swiper-slidek;
+            width: 100%;
+            height: 100%;
+        }
+        swiper-container {
+            width: 100%;
+            height: 100vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+        .mySwiper {
+            height: 80%;
+            width: 100%;
+        }
+        .mySwiper img{
+            object-fit: cover;
+        }
+        .mySwiper2 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+        .mySwiper2 swiper-slide {
+            width: 10%;
+            height: 100%;
+            opacity: .4;
+
+        }
+        
+        .mySwiper2 .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+        swiper-slide img {
+            object-fit: cover;
+            display: sw </swiper-slidek;
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* slider2 */
+        .circle{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid white;
+            margin: 0px 5px;
+            cursor: pointer;
+        }
+        #list{
+            background-color: rgba(0, 0, 0, 0.297);
+        }
+
+    </style>
+</head>
+<!-- <script src="swiper/swiper-bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<body class="font-primary s	">
+    <main id="mn" class="w-[100%] h-[100vh] overflow-y-scroll overflow-x-hidden ">
+        <section id="whole" class="w-full h-[10000px] flex flex-wrap justify-center content-start scroll-smooth">
+            <!--start first sec -->
+            <section id="first" class="w-[100%] h-[120vh] flex flex-wrap justify-center content-center relative">
+                <div id="background" class="w-[100%] h-full bg-[url('../img/1.webp')] bg-center bg-cover bg-no-repeat absolute -z-10 after:content-[''] after:absolute after:top-0 after:left-0 after:flex after:bg-[#2a2a2b] after:z-10 after:w-full after:h-full after:opacity-30"></div>
+                <header id="_header" class="w-[99%] flex justify-between lg:justify-center items-center content-center p-10 bg-red-600 pt-10 transition-all duration-700 fixed top-0 z-50">
+                    <figure class="w-[20%] lg:w-[10%] overflow-hidden"><img id="logo" class="w-full h-full object-cover" src="img/logo1.svg" alt=""></figure>
+                    <ul id="menu" class="w-[50%] flex justify-end lg:justify-center items-center bg-blue-600 mx-10 ">
+                        <li class="h-[40px] w-fit mx-2 text-white text-[12px] p-4 hidden lg:flex hover:bg-[#4b5563] hover:text-black transition-all duration-700 cursor-pointer"><a class="flex justify-center items-center w-full h-full " href="">ABOUT</a></li>
+                        <li class="h-[40px] w-fit mx-2 text-white text-[12px] p-4 hidden lg:flex hover:bg-[#4b5563] hover:text-black transition-all duration-700 cursor-pointer"><a class="flex justify-center items-center w-full h-full " href="">FEATURES</a></li>
+                        <li class="h-[40px] w-fit mx-2 text-white text-[12px] p-4 hidden lg:flex hover:bg-[#4b5563] hover:text-black transition-all duration-700 cursor-pointer"><a class="flex justify-center items-center w-full h-full " href="">TEAM</a></li>
+                        <li class="h-[40px] w-fit mx-2 text-white text-[12px] p-4 hidden lg:flex hover:bg-[#4b5563] hover:text-black transition-all duration-700 cursor-pointer"><a class="flex justify-center items-center w-full h-full " href="">BLOG</a></li>
+                        <li class="h-[40px] w-fit mx-2 flex lg:hidden"><button id="open_close_dropdown_menu"><i class="bi bi-list text-orange text-[30px] cursor-pointer "></i></button></li>
+                    </ul>
+                    <div class="w-[20%] hidden lg:flex ">
+                        <button class="w-[150px] h-[40px] bg-darkgreen text-orange text-[12px] text-center hover:bg-[#567c5b] transition-all duration-700  justify-center items-center cursor-pointer">CONTACT US</button>
+                    </div>
+                </header>
+
+                <div id="dropdown_menu" data-state ='closed' class="w-[100%] h-auto absolute top-0 overflow-hidden left-0 z-40 bg-darkgreen flex lg:hidden">
+                    <ul class="w-full flex flex-wrap justify-center content-center overflow-hidden pt-0">
+                        <li class="w-full h-0 transition-all duration-700 flex justify-center items-center overflow-hidden hover:bg-lightgreen"><a class="flex w-full h-full justify-center items-center text-[15px] text-white text-center" href="">About</a></li>
+                        <li class="w-full h-0 transition-all duration-700 flex justify-center items-center overflow-hidden hover:bg-lightgreen"><a class="flex w-full h-full justify-center items-center text-[15px] text-white text-center" href="">Features</a></li>
+                        <li class="w-full h-0 transition-all duration-700 flex justify-center items-center overflow-hidden hover:bg-lightgreen"><a class="flex w-full h-full justify-center items-center text-[15px] text-white text-center" href="">Team</a></li>
+                        <li class="w-full h-0 transition-all duration-700 flex justify-center items-center overflow-hidden hover:bg-lightgreen"><a class="flex w-full h-full justify-center items-center text-[15px] text-white text-center" href="">Blog</a></li>
+                        <li class="w-full h-0 transition-all duration-700 flex justify-center items-center overflow-hidden hover:bg-lightgreen"><a class="flex w-full h-full justify-center items-center text-[15px] text-white text-center" href="">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="w-full h-[50%] flex flex-wrap justify-center content-center overflow-hidden mt-20  p-10 ">
+                    <span class="text-white text-center w-full text-[15px]">- NORRA PRESENT -</span>
+                    <p class="text-white text-center w-[80%] lg:w-[50%] text-[50px] lg:text-[84px] font-secondary leading-[70px] mt-6">The most <span class="font-third text-[50px] lg:text-[84px] ">impressive</span> adventures on the world.</p>
+                    
+                </div>
+                <div class="w-full flex justify-start items-center px-10 mt-10" >
+                    <div class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-white border-dotted flex justify-center items-center">
+                        <figure class="w-[60px] h-[60px] lg:w-[80px] lg:h-[80px] rounded-full overflow-hidden"><img class="w-full h-full object-cover" src="img/logo2.webp" alt=""></figure>
+                    </div>
+                    <button id="opengallery" class="text-[12px] text-white w-[100px] h-[40px] mx-4 cursor-pointer hover:scale-125 transition-all duration-500">OPEN GALLERY</button>
+                </div>
+                <!-- ***slider*** -->
+                <div id="_slider" class="w-full h-[100vh] absolute top-0 left-0  bg-[#111827e8] scale-0 transition-all duration-700 z-50">
+                    <button id="closegallery" class="w-[50px] absolute top-[2%] right-[1%] cursor-pointer z-50"><i class="bi bi-x-lg text-white text-[30px]"></i></button>
+                    <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+                    thumbs-swiper=".mySwiper2" loop="true" space-between="10" navigation="true">
+                    <swiper-slide>
+                    <img src="img/slide1.webp" />
+                    </swiper-slide>
+                    <swiper-slide>
+                    <img src="img/slide2.webp" />
+                    </swiper-slide>
+                    <swiper-slide>
+                    <img src="img/slide3.webp" />
+                    </swiper-slide>
+                    <swiper-slide>
+                    <img src="img/slide4.jpg" />
+                    </swiper-slide>
+                    <swiper-slide>
+                    <img src="img/slide5.webp" />
+                    </swiper-slide>
+                    
+                </swiper-container>
+
+                <swiper-container class="mySwiper2" loop="true" space-between="10" slides-per-view="5" free-mode="true"
+                    watch-slides-progress="true">
+                    <swiper-slide>
+                    <img src="img/slide1.webp" />
+                    </swiper-slide>
+                    <swiper-slide>
+                    <img src="img/slide2.webp" />
+                    </swiper-slide>
+                    <swiper-slide>
+                    <img src="img/slide3.webp" />
+                    </swiper-slide>
+                    <swiper-slide>
+                    <img src="img/slide4.jpg" />
+                    </swiper-slide>
+                    <swiper-slide>
+                    <img src="img/slide5.webp" />
+                    </swiper-slide>
+                    
+                </swiper-container>
+                </div>
+            </section>
+            <!-- end first sec -->
+            <!-- start second sec -->
+            <section id="second" class="w-full h-[120vh] bg-darkgreen flex flex-wrap justify-center content-center p-20">
+                <span class="w-full text-center text-[12px] text-[#969797] mb-4 mt-10">HOW IT STARTED?</span>
+                <span class="w-full text-[30px] text-white text-center ">What is Norra?</span>
+                <div class="w-full h-[80%]  flex justify-center items-center my-10">
+                    <div id="box" class="w-[200px] lg:w-[350px] h-[60%] lg:h-[90%] bg-midnight relative">
+                        <img class=" translate-x-0 rotate-0 absolute w-full h-full object-cover bottom-0 left-0 origin-bottom-left transition-all duration-700" src="img/slide2.webp" alt="">
+                        <img class=" translate-x-0 rotate-0 absolute w-full h-full object-cover bottom-0 left-0 origin-center transition-all duration-700" src="img/slide4.jpg" alt="">
+                        <img class=" translate-x-0 rotate-0 absolute w-full h-full object-cover bottom-0 right-0 origin-bottom-right transition-all duration-700" src="img/slide3.webp" alt="">
+                    </div>
+                </div>
+            </section>
+            <!-- end second sec -->
+            <!-- start third sec -->
+            <section id="third" class="w-full h-fit min-h-[100vh] flex flex-wrap justify-center content-center bg-darkgreen p-10">
+                <div id="firstrow" class=" w-full lg:w-[80%] h-[48%] flex flex-wrap justify-center content-center ">
+                    <article class="scale-150 opacity-10 w-[90%] md:w-[50%] lg:w-[45%] h-[48%] md:h-full  flex flex-wrap justify-center content-center ">
+                        <figure class="w-[50px] h-[50px] overflow-hidden"><img class="w-full h-full object-cover" src="img/map.svg" alt=""></figure>
+                        <strong class="w-full flex justify-center items-center text-center text-yellow text-[40px] font-secondary">Impressive adventures</strong>
+                        <p class="w-[80%] lg:w-[60%] text-[20px] text-white font-secondary text-center">We travel thousands of kilometers around the world to find the best places to spend time.</p>
+                    </article>
+                    <article class="scale-150 opacity-10 w-[90%] md:w-[50%] lg:w-[45%] h-[48%] md:h-full  flex flex-wrap justify-center content-center ">
+                        <figure class="w-[50px] h-[50px] overflow-hidden"><img class="w-full h-full object-cover" src="img/exercise.svg" alt=""></figure>
+                        <strong class="w-full flex justify-center items-center text-center text-yellow text-[40px] font-secondary">Experience complete rest</strong>
+                        <p class="w-[80%] lg:w-[60%] text-[20px] text-white font-secondary text-center">We help you relax, because we know that it is not easy if you live in complete shame on a daily basis.</p>
+                    </article>
+                </div>
+                <div id="secondrow" class=" w-full lg:w-[80%] h-[48%] flex flex-wrap justify-center content-center mt-10">
+                    <article class="scale-150 opacity-10 w-[90%] md:w-[50%] lg:w-[45%] h-[48%] md:h-full  flex flex-wrap justify-center content-center ">
+                        <figure class="w-[50px] h-[50px] overflow-hidden"><img class="w-full h-full object-cover" src="img/visibility.svg" alt=""></figure>
+                        <strong class="w-full flex justify-center items-center text-center text-yellow text-[40px] font-secondary">Notice the imperceptibles</strong>
+                        <p class="w-[80%] lg:w-[60%] text-[20px] text-white font-secondary text-center">It is easier to focus on the world around you when you don't have to think about anything, because we will plan the entire trip for you.</p>
+                    </article>
+                    <article class="scale-150 opacity-10 w-[90%] md:w-[50%] lg:w-[45%] h-[48%] md:h-full border-l border-t border-white flex flex-wrap justify-center content-center ">
+                        <strong class="w-[80%] flex justify-start items-center text-start text-white text-[30px] font-secondary mt-4">You won't find anything other than peace in these places.</strong>
+                        <p class="w-[80%] lg:w-[80%] text-[20px] text-white font-secondary text-start mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis.</p>
+                    </article>
+                </div>
+            </section>
+            <!-- end third sec -->
+            <!-- start fourth sec -->
+            <section id="fourth" class="w-full h-fit lg:min-h-[150vh] bg-lightgray px-4 py-20 overflow-hidden">
+                <div class="w-full h-[25%] flex flex-wrap justify-center content-center mt-10">
+                    <span class="w-full text-center text-[12px] font-primary text-[#969797] mt-10">SAMPLE DIRECTIONS</span>
+                    <div class="w-full flex justify-center content-center"><p class="w-[300px] text-[50px] text-center font-secondary text-black">See our amazing <span class="text-[40px] font-third text-black">travels.</span></p></div>
+                    <div class="w-full flex justify-center my-10"><button class="w-[200px] h-[50px] bg-[#567c5b] text-white text-[15px] flex justify-center items-center transition-all duration-500 hover:bg-darkgreen hover:text-orange">DISCOVER MORE</button></div>
+                </div>
+                <div class="w-[100%] h-[70%] flex flex-wrap justify-center content-center mt-10 xl:mt-20 ">
+
+                    <div class="m-2 overflow-hidden relative w-full md:w-[45%] lg:w-[23%] h-[600px] after:content-[''] after:absolute after:top-0 after:left-0 after:flex after:bg-[#0e0e0e93] after:z-10 after:w-full after:h-full ">
+                        <img  class="h-[140%] w-full absolute bottom-[-40%] left-0 object-cover" src="img/ax1.webp" alt="">
+                        <div class="w-full flex justify-start content-end absolute top-[10px] left-[10px] z-20 ">
+                            <span class="text-[15px] text-white font-primary ml-1 flex items-end "><i class="bi bi-geo-alt-fill text-[20px]"></i>INDIA</span>
+                        </div>
+                        <article class="w-full h-[50%] flex flex-wrap justify-start content-center absolute bottom-0 left-0 z-20 p-4">
+                            <strong class="text-[30px] text-white text-start w-full font-third">Intense flavors & blissful</strong>
+                            <p class="text-white text-[12px] text-start w-[90%] my-4">This quam quae perferendis harum amet dolorum possimus minus. Occaecati magnam animi quasi dolor quae et aut. Autem voluptas alias nobis in odit.</p>
+                            <div class="w-full flex justify-start">
+                                <button class="hover:bg-white transition-all duration-500 w-[150px] h-[40px] text-[12px] bg-[#ffffffb5] text-black flex justify-center items-center font-primary mt-4">DISCOVER</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="m-2 overflow-hidden relative w-full md:w-[45%] lg:w-[23%] h-[600px] after:content-[''] after:absolute after:top-0 after:left-0 after:flex after:bg-[#0e0e0e93] after:z-10 after:w-full after:h-full ">
+                        <img  class="h-[140%] w-full absolute bottom-[-40%] left-0 object-cover " src="img/ax2.webp" alt="">
+                        <div class="w-full flex justify-start content-end absolute top-[10px] left-[10px] z-20 ">
+                            <span class="text-[15px] text-white font-primary ml-1 flex items-end "><i class="bi bi-geo-alt-fill text-[20px]"></i>AMAZONIA</span>
+                        </div>
+                        <article class="w-full h-[50%] flex flex-wrap justify-start content-center absolute bottom-0 left-0 z-20 p-4">
+                            <strong class="text-[30px] text-white text-start w-full font-third">A fresh look at the world</strong>
+                            <p class="text-white text-[12px] text-start w-[90%] my-4">This quam quae perferendis harum amet dolorum possimus minus. Occaecati magnam animi quasi dolor quae et aut. Autem voluptas alias nobis in odit.</p>
+                            <div class="w-full flex justify-start">
+                                <button class="hover:bg-white transition-all duration-500 w-[150px] h-[40px] text-[12px] bg-[#ffffffb5] text-black flex justify-center items-center font-primary mt-4">DISCOVER</button>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="m-2 overflow-hidden relative w-full md:w-[45%] lg:w-[23%] h-[600px] after:content-[''] after:absolute after:top-0 after:left-0 after:flex after:bg-[#0e0e0e93] after:z-10 after:w-full after:h-full ">
+                        <img  class="h-[140%] w-full absolute bottom-[-40%] left-0 object-cover " src="img/ax3.webp" alt="">
+                        <div class="w-full flex justify-start content-end absolute top-[10px] left-[10px] z-20">
+                            <span class="text-[15px] text-white font-primary ml-1 flex items-end "><i class="bi bi-geo-alt-fill text-[20px]"></i>AMAZONIA</span>
+                        </div>
+                        <article class="w-full h-[50%] flex flex-wrap justify-start content-center absolute bottom-0 left-0 z-20 p-4">
+                            <strong class="text-[30px] text-white text-start w-full font-third">Clean water & fresh air</strong>
+                            <p class="text-white text-[12px] text-start w-[90%] my-4">This quam quae perferendis harum amet dolorum possimus minus. Occaecati magnam animi quasi dolor quae et aut. Autem voluptas alias nobis in odit.</p>
+                            <div class="w-full flex justify-start">
+                                <button class="hover:bg-white transition-all duration-500 w-[150px] h-[40px] text-[12px] bg-[#ffffffb5] text-black flex justify-center items-center font-primary mt-4">DISCOVER</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="m-2 overflow-hidden relative w-full md:w-[45%]  lg:w-[23%] h-[600px]  after:content-[''] after:absolute after:top-0 after:left-0 after:flex after:bg-[#0e0e0e93] after:z-10 after:w-full after:h-full ">
+                        <img  class="h-[140%] w-full absolute bottom-[-40%] left-0 object-cover " src="img/ax4.webp" alt="">
+                        <div class="w-full flex justify-start content-end absolute top-[10px] left-[10px] z-20">
+                            <span class="text-[15px] text-white font-primary ml-1 flex items-end "><i class="bi bi-geo-alt-fill text-[20px]"></i>AFRICA</span>
+                        </div>
+                        <article class="w-full h-[50%] flex flex-wrap justify-start content-center absolute bottom-0 left-0 z-20 p-4">
+                            <strong class="text-[30px] text-white text-start w-full font-third">Losing yourself in the desert</strong>
+                            <p class="text-white text-[12px] text-start w-[90%] my-4">This quam quae perferendis harum amet dolorum possimus minus. Occaecati magnam animi quasi dolor quae et aut. Autem voluptas alias nobis in odit.</p>
+                            <div class="w-full flex justify-start">
+                                <button class="hover:bg-white transition-all duration-500 w-[150px] h-[40px] text-[12px] bg-[#ffffffb5] text-black flex justify-center items-center font-primary mt-4">DISCOVER</button>
+                            </div>
+                            
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- end fourth sec -->
+            <!-- start 5th sec -->
+            <section id="fifth" class="w-full h-fit  flex flex-wrap justify-center content-center bg-darkgreen p-4">
+                <div class="sec5_boxs opacity-10 scale-110 w-full xl:w-[90%] h-[200px] lg:h-[400px] flex flex-wrap justify-center content-center border-b-2 border-white p-4">
+                    <span class="flex justify-center w-full text-[12px] font-primary text-[#b1b2b2] text-center">SAMPLE DIRECTIONS</span>
+                    <strong class="flex justify-center w-full text-[25px] lg:text-[40px] text-white text-center font-secondary my-2">Discover the most <span class="font-third text-white text-[25px] lg:text-[40px]">impressive adventures. </span></strong>
+                    <p class="text-[12px] lg:text-[15px] text-[#b1b2b2]">This quam quae perferendis harum amet dolorum possimus minus.</p>
+                </div>
+                <!-- first -->
+                <div class="sec5_boxs opacity-10 scale-110 w-full xl:w-[90%] h-[60%] flex flex-wrap justify-center content-center border-b-2 border-white">
+                    <div class="w-full lg:w-[50%] h-full flex flex-wrap justify-center lg:justify-start content-center p-2 lg:p-4">
+                        <strong class="w-full flex justify-center lg:justify-start text-center lg:text-start text-[25px] lg:text-[40px] font-secondary text-yellow">We Got To Know This Culture</strong>
+                        <p class="w-full p-2 text-[15px] text-[#b1b2b2] text-center lg:text-start my-4 lg:my-10">Fugiat quasi officia nihil aut. Velit at eveniet sint at et. Autem cum officiis reiciendis est corrupti sunt corrupti omnis consequatur. Sunt alias enim. Repudiandae sequi nihil quam non suscipit eligendi repudiandae nostrum.</p>
+                        <div class="w-full flex justify-center lg:justify-start items-center"><button class="w-[150px] h-[40px] bg-[#ffffffb5] text-white text-[15px] transition-all duration-500 hover:bg-darkgreen hover:text-orange">READ MORE</button></div>
+                    </div>
+                    <div class="w-full lg:w-[50%] h-full flex justify-center items-center my-4">
+                        <figure class="w-[90%] h-[90%] overflow-hidden"><img class="w-full h-full object-cover" src="img/sec5_1.webp" alt=""></figure>
+                    </div>
+                </div>
+                <!-- second -->
+                <div class="sec5_boxs opacity-10 scale-110 w-full xl:w-[90%] h-[60%] flex flex-wrap justify-center content-center border-b-2 border-white">
+                    <div class="w-full lg:w-[50%] h-full flex flex-wrap justify-center lg:justify-start content-center p-2 lg:p-4">
+                        <strong class="w-full flex justify-center lg:justify-start text-center lg:text-start text-[25px] lg:text-[40px] font-secondary text-yellow">Meet The Animals Of This Region</strong>
+                        <p class="w-full p-2 text-[15px] text-[#b1b2b2] text-center lg:text-start my-4 lg:my-10">Fugiat quasi officia nihil aut. Velit at eveniet sint at et. Autem cum officiis reiciendis est corrupti sunt corrupti omnis consequatur. Sunt alias enim. Repudiandae sequi nihil quam non suscipit eligendi repudiandae nostrum.</p>
+                        <div class="w-full flex justify-center lg:justify-start items-center"><button class="w-[150px] h-[40px] bg-[#ffffffb5] text-white text-[15px] transition-all duration-500 hover:bg-darkgreen hover:text-orange">READ MORE</button></div>
+                    </div>
+                    <div class="w-full lg:w-[50%] h-full flex justify-center items-center my-4">
+                        <figure class="w-[90%] h-[90%] overflow-hidden"><img class="w-full h-full object-cover" src="img/sec5_2.webp" alt=""></figure>
+                    </div>
+                </div>
+                <!-- third -->
+                <div class="sec5_boxs opacity-10 scale-110 w-full xl:w-[90%] h-[60%] flex flex-wrap justify-center content-center border-white">
+                    <div class="w-full lg:w-[50%] h-full flex flex-wrap justify-center lg:justify-start content-center p-2 lg:p-4">
+                        <strong class="w-full flex justify-center lg:justify-start text-center lg:text-start text-[25px] lg:text-[40px] font-secondary text-yellow">Meet The Animals Of This Region</strong>
+                        <p class="w-full p-2 text-[15px] text-[#b1b2b2] text-center lg:text-start my-4 lg:my-10">Fugiat quasi officia nihil aut. Velit at eveniet sint at et. Autem cum officiis reiciendis est corrupti sunt corrupti omnis consequatur. Sunt alias enim. Repudiandae sequi nihil quam non suscipit eligendi repudiandae nostrum.</p>
+                        <div class="w-full flex justify-center lg:justify-start items-center"><button class="w-[150px] h-[40px] bg-[#ffffffb5] text-white text-[15px] transition-all duration-500 hover:bg-darkgreen hover:text-orange">READ MORE</button></div>
+                    </div>
+                    <div class="w-full lg:w-[50%] h-full flex justify-center items-center my-4">
+                        <figure class="w-[90%] h-[90%] overflow-hidden"><img class="w-full h-full object-cover" src="img/sec5_3.webp" alt=""></figure>
+                    </div>
+                </div>
+            </section>
+            <!-- end 5th sec -->
+            <!-- start 6th sec -->
+            <section id="sixth" class="w-[100%] h-[100vh] relative">
+                <section id="main_box" class="w-full h-full border relative overflow-hidden bg-bubble-gum">
+                    <section id="carousel" class="transition-all duration-1000 h-full flex absolute left-0 top-0 border bg-midnight">
+                        <div class="w-full h-full flex flex-wrap justify-center content-center bg-[url('../img/africa.webp')] bg-center bg-cover bg-no-repeat transition-all duration-1000" >
+                            <span class="transition-all duration-700 opacity-10 scale-110 text-[20px] flex w-full justify-center text-white">- I WANT TO DISCOVER -</span>
+                            <strong class="transition-all duration-700 opacity-10 scale-110 font-secondary text-[100px] text-white w-full flex justify-center text-center my-10">AFRICA</strong>
+                            <div class="transition-all duration-700 opacity-10 scale-110 w-full flex justify-center"><button class="w-[200px] h-[40px] bg-[#ffffffb5] text-black text-[15px] flex justify-center items-center hover:bg-white transition-all duration-500">DISCOVER NOW</button></div>
+                        </div>
+                        <div class="w-full h-full flex flex-wrap justify-center content-center bg-[url('../img/india.webp')] bg-center bg-cover bg-no-repeat transition-all duration-1000" >
+                            <span class="transition-all duration-700 opacity-10 scale-110 text-[20px] flex w-full justify-center text-white">- I WANT TO DISCOVER -</span>
+                            <strong class="transition-all duration-700 opacity-10 scale-110 font-secondary text-[100px] text-white w-full flex justify-center text-center my-10">INDIA</strong>
+                            <div class="transition-all duration-700 opacity-10 scale-110 w-full flex justify-center"><button class="w-[200px] h-[40px] bg-[#ffffffb5] text-black text-[15px] flex justify-center items-center hover:bg-white transition-all duration-500">DISCOVER NOW</button></div>
+                        </div>
+                        <div class="w-full h-full flex flex-wrap justify-center content-center bg-[url('../img/amazonia.webp')] bg-center bg-cover bg-no-repeat transition-all duration-1000" >
+                            <span class="transition-all duration-700 opacity-10 scale-110 text-[20px] flex w-full justify-center text-white">- I WANT TO DISCOVER -</span>
+                            <strong class="transition-all duration-700 opacity-10 scale-110 font-secondary text-[100px] text-white w-full flex justify-center text-center my-10">AMAZONIA</strong>
+                            <div class="transition-all duration-700 opacity-10 scale-110 w-full flex justify-center"><button class="w-[200px] h-[40px] bg-[#ffffffb5] text-black text-[15px] flex justify-center items-center hover:bg-white transition-all duration-500">DISCOVER NOW</button></div>
+                        </div> 
+                    </section>
+                    <span  id="right" class="absolute top-[45%] right-0 cursor-pointer"><i class="bi bi-arrow-right-circle text-[30px] "></i></span>
+                    <span  id="left" class="absolute top-[45%] left-0 cursor-pointer"><i class="bi bi-arrow-left-circle text-[30px] "></i></span>
+                    <ul id="list" class="w-full flex justify-center items-center absolute left-0 bottom-0 border h-[40px]"></ul>
+                </section>     
+            </section>
+            <!-- end 6th sec -->
+            <!-- start 7th sec -->
+            <section id="seventh" class="w-full h-fit min-h-[120vh] flex flex-wrap justify-center content-center bg-darkgreen">
+                <div class="w-full h-fit min-h-[120vh] flex flex-wrap justify-center content-center scale-150 opacity-10">
+                    <span class="flex justify-center w-full text-[12px] font-primary text-[#858585] text-center mt-20 lg:mt-32">WE ARE ALWAYS AVAILABLE</span>
+                    <p class="font-secondary text-[40px] lg:text-[50px] text-center text-white w-full lg:w-[35%]">Contact me if you want to <span class="font-third text-[50px] text-center text-white">experience</span> an amazing time.</p>
+                    <div class="w-full p-10 flex flex-wrap justify-center content-center h-[70%] ">
+                        <div if="info" class=" w-full lg:w-[45%] h-full flex flex-wrap justify-start content-center">
+                            <div class="w-full flex flex-wrap justify-center content-center mt-4" >
+                                <div class="w-[100px] h-[100px] rounded-full flex justify-center items-center border-2 border-white border-dotted"><i class="bi bi-envelope-fill text-orange text-[20px]"></i></div>
+                                <div class="w-[45%] flex flex-wrap justify-start content-center ml-4">
+                                    <span class="w-full flex text-[20px] text-yellow text-start font-secondary">Send Email</span>
+                                    <a class="w-full text-[15px] text-white text-start" href="mailto:farajikatayoon75@gmail.com">farajikatayoon75@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="w-full flex flex-wrap justify-center content-center mt-4" >
+                                <div class="w-[100px] h-[100px] rounded-full flex justify-center items-center border-2 border-white border-dotted"><i class="bi bi-linkedin text-orange text-[20px]"></i></div>
+                                <div class="w-[45%] flex flex-wrap justify-start content-center ml-4">
+                                    <span class="w-full flex text-[20px] text-yellow text-start font-secondary">My Linkedin</span>
+                                    <a class="w-full text-[15px] text-white text-start" href="https://www.linkedin.com/in/katayoon-faraji-web-3b722b207">katayoon-faraji-web</a>
+                                </div>
+                            </div>
+                            <div class="w-full flex flex-wrap justify-center content-center mt-4" >
+                                <div class="w-[100px] h-[100px] rounded-full flex justify-center items-center border-2 border-white border-dotted"><i class="bi bi-github text-orange text-[20px]"></i></div>
+                                <div class="w-[45%] flex flex-wrap justify-start content-center ml-4">
+                                    <span class="w-full flex text-[20px] text-yellow text-start font-secondary">My Github</span>
+                                    <a class="w-full text-[15px] text-white text-start" href="https://github.com/katayoon-faraji-web">katayoon-faraji-web</a>
+                                </div>
+                            </div>
+                            <div class="w-full flex flex-wrap justify-center content-center mt-4" >
+                                <div class="w-[100px] h-[100px] rounded-full flex justify-center items-center border-2 border-white border-dotted"><i class="icon-instagram text-orange text-[20px]"></i></div>
+                                <div class="w-[45%] flex flex-wrap justify-start content-center ml-4">
+                                    <span class="w-full flex text-[20px] text-yellow text-start font-secondary">My Instagram</span>
+                                    <a class="w-full text-[15px] text-white text-start" href="https://instagram.com/katayoon_faraji_web">katayoon_faraji_web</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <figur class="w-[30%] h-full overflow-hidden "><img class="w-full object-cover" src="img/me.png" alt=""></figur>
+                    </div>
+                </div>
+                
+            </section>
+            <!-- end 7th sec -->
+            <!-- start 8th sec -->
+            <section id="eigth" class="w-full h-[100vh] flex flex-wrap justify-content content-center relative">
+                <div id="_bg2" class="w-[140%] h-full bg-[url('../img/sec8_1.webp')] bg-center bg-cover bg-no-repeat absolute -z-10">
+                    <div class="w-full h-full bg-[url('../img/sec8_2.webp')] bg-center bg-cover bg-no-repeat absolute  mix-blend-screen"></div>
+                </div>
+                <div class="w-full h-[100vh] flex flex-wrap justify-content content-center relative">
+                    <div class="w-full flex justify-center"><strong class="font-secondary text-white text-[50px] w-[70%] lg:w-[25%] text-center">Join our <span class="font-third text-white text-[50px] w-[30%] text-center">newsletter</span> to stay up to date</strong></div>
+                    <div class="w-full flex justify-center mt-10"><p class="text-[15px] text-white text-center font-primary w-[80%] lg:w-[30%] ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum</p></div>
+                    <div class="w-full flex justify-center items-center mt-10">
+                        <input type="text" class="w-[250px] h-[40px] text-[12px] text-[#b1b2b2] mr-6 p-4" placeholder="ENTER YOUR EMAIL">
+                        <button class="w-[150px] h-[40px] flex justify-center items-center bg-[#59685b] text-white text-[12px] hover:bg-darkgreen hover:text-orange transition-all duration-500">SUBSCRIBE</button>
+                    </div>
+                </div>
+                
+                
+            </section>
+            <!-- end 8th sec -->
+            <!-- start footer -->
+            <section id="footer" class="w-full h-fit min-h-[120vh] bg-darkgreen flex flex-wrap justify-center content-center">
+                <div class="flex flex-wrap justify-center content-start w-[90%] h-[40%] border-b-2 border-white py-20">
+                    <div class="w-[80%] lg:w-[10%] h-full flex flex-wrap justify-center lg:justify-start content-center lg:mr-20 ">
+                        <figure class="w-[100px] lg:w-[200px] overflow-hidden "><img id="logo" class="w-full h-full object-cover" src="img/logo1.svg" alt=""></figure>
+                    </div>
+                    <div class="w-[80%] lg:w-[20%] h-full flex flex-wrap justify-center lg:justify-start content-center mx-4 mt-4">
+                        <strong class="w-full flex text-orange text-[30px] text-start justify-center lg:justify-start font-secondary">Pages</strong>
+                        <ul>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">Home</a></li>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">About Me</a></li>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">Team</a></li>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">Blog</a></li>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">Contact</a></li>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">Features</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-[80%] lg:w-[20%] h-full flex flex-wrap justify-center lg:justify-start content-center mx-4 mt-4">
+                        <strong class="w-full flex text-orange text-[30px] text-start justify-center lg:justify-start font-secondary">Resources</strong>
+                        <ul>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">Changelog</a></li>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">Style guide</a></li>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">Licenses</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-[80%] lg:w-[20%] h-full flex flex-wrap justify-center lg:justify-start content-center mx-4 mt-4">
+                        <strong class="w-full flex text-orange text-[30px] text-start justify-center lg:justify-start font-secondary">Privacy Policy</strong>
+                        <ul>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">Terms & Conditions</a></li>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">Privay Policy</a></li>
+                            <li class="w-full h-[40px] text-start"><a class="w-full h-full flex justify-center lg:justify-start items-center text-[12px] text-white" href="">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full h-[30%] flex flex-wrap justify-center content-center p-10">
+                    <p class="w-full text-center text-[12px] text-white">Copyright © 2023 Norra • Made with love by Jaromin.co</p>
+                    <div class="w-full  flex justify-center items-center mt-20"><button class="w-[200px] h-[40px] bg-[#feb] text-black text-[12px] flex justify-center items-center cursor-pointer hover:bg-white transition-all duration-500" ><img src="https://uploads-ssl.webflow.com/63581d2d6f71d47f01fbd733/63581d2d6f71d47722fbd78c_webflow-w-small%402x.png" width="15" alt="" class="webflow-logo-tiny mr-2">Powered By Webflow</button></div>
+                </div>
+
+            </section>
+            <!-- end footer -->
+
+
+        </section>
+    </main>
+    <span id="st_show" class="text-[30px] opacity-0 w-[200px] h-[60px] fixed top-0 left-2"></span>
+
+    <script>
+        let _main = document.getElementById('mn')
+        let _whole = document.getElementById('whole')
+        let st_show = document.getElementById('st_show')
+        let open_gallery_btn = document.getElementById('opengallery')
+        let close_gallery_btn = document.getElementById('closegallery')
+        let _slider = document.getElementById('_slider')
+        let _header = document.getElementById('_header')
+        let _bg = document.getElementById('background')
+        let _3imgholder = document.getElementById('box')
+        let _3imgs = document.querySelectorAll('#box>img')
+        let third_section = document.getElementById('third')
+        let fourth_section = document.getElementById('fourth')
+        let fifth_section = document.getElementById('fifth')
+        let sixth_section = document.getElementById('sixth')
+        let seventh_section = document.getElementById('seventh')
+        let eigth_section = document.getElementById('eigth')
+        let _bg2 = document.getElementById('_bg2')
+        let _dropdown_menu = document.getElementById('dropdown_menu')
+        let _btn_open_close_dropdown_menu = document.getElementById('open_close_dropdown_menu')
+
+        let third_section_articles = document.querySelectorAll('#third article')
+        let fourth_section_articles = document.querySelectorAll('#fourth img')
+        let fifth_section_articles = document.querySelectorAll('#whole .sec5_boxs')
+        let seventh_section_everything = document.querySelector('#seventh>div')
+        let eigth_section_everything = document.querySelector('#eigth>div')
+        let _carousel2 = document.getElementById('carousel')
+        let _carousel2_spans = document.querySelectorAll('#carousel span')
+        let _carousel2_strongs = document.querySelectorAll('#carousel strong')
+        let _carousel2_divs = document.querySelectorAll('#carousel div')
+        let all_sections = document.querySelectorAll('#whole>section')
+        let lis_in_dropdown_menu = document.querySelectorAll('#dropdown_menu li')
+
+        let sh = _whole.scrollHeight
+        let header_height = _header.clientHeight
+        let header_offsettop = _header.offsetTop
+        let _3imgholder_offsettop = _3imgholder.offsetTop
+        let third_section_offsettop = third_section.offsetTop
+        let fourth_section_offsettop = fourth_section.offsetTop
+        let fifth_section_offsettop = fifth_section.offsetTop
+        let sixth_section_offsettop = sixth_section.offsetTop
+        let seventh_section_offsettop = seventh_section.offsetTop
+        let eigth_section_offsettop = eigth_section.offsetTop
+        let _main_clientwidth = _main.clientWidth
+        let scroll_height = 0
+
+        all_sections.forEach((val)=>{
+            scroll_height += val.clientHeight
+        })
+
+        _whole.style.height = scroll_height +'px'
+        fifth_section_articles.forEach((val)=>{
+            val.setAttribute('data-offsetTop',val.offsetTop)
+        })
+
+        window.addEventListener('resize',()=>{
+            sh = _whole.scrollHeight
+            header_height = _header.clientHeight
+            header_offsettop = _header.offsetTop
+            _3imgholder_offsettop = _3imgholder.offsetTop
+            third_section_offsettop = third_section.offsetTop
+            fourth_section_offsettop = fourth_section.offsetTop
+            fifth_section_offsettop = fifth_section.offsetTop
+            sixth_section_offsettop = sixth_section.offsetTop
+            seventh_section_offsettop = seventh_section.offsetTop
+            eigth_section_offsettop = eigth_section.offsetTop
+            _main_clientwidth = _main.clientWidth
+            scroll_height = 0
+
+            all_sections.forEach((val)=>{
+                scroll_height += val.clientHeight
+            })
+
+            _whole.style.height = scroll_height +'px'
+            fifth_section_articles.forEach((val)=>{
+                val.setAttribute('data-offsetTop',val.offsetTop)
+            })
+        })
+        
+        let st_old = 0
+
+        _main.addEventListener('scroll',(e)=>{
+            let st = _main.scrollTop
+            st_show.innerHTML = st
+            
+            if(st>st_old){
+                _header.style.transform = 'translateY(-'+(header_height+header_offsettop)+'px)'
+            }
+            else{
+                _header.style.top = st+'px'
+                _header.style.top = 0
+                _header.style.transform = 'translateY(0px)'
+                if(st>700){
+                    _header.style.background = '#2a2a2b6b'
+                }
+                else{
+                    _header.style.background = 'transparent'
+                }
+            }
+            _dropdown_menu.style.top = st+'px'
+            if(_main.clientWidth<800){
+                _bg.style.width = (100+(st/2))+'%'
+            }
+            else{
+                _bg.style.width = (100+(st/5))+'%'
+            }
+            
+            if((st+500)>=_3imgholder_offsettop){
+                _3imgs[0].style.transform = 'rotate('+(-(st/50))+'deg) translateX(-'+((st/8))+'px)'
+                _3imgs[1].style.transform = 'rotate(0deg)'
+                _3imgs[2].style.transform = 'rotate('+((st/50))+'deg) translateX('+((st/8))+'px)'
+            }
+            else{
+                _3imgs[0].style.transform = 'rotate(0deg) translateX(0px)'
+                _3imgs[1].style.transform = 'rotate(0deg)'
+                _3imgs[2].style.transform = 'rotate(0deg) translateX(0px)'
+            }
+
+
+            if((st+200)>=third_section_offsettop){
+                third_section_articles.forEach((val)=>{
+                    if(((st-((st-third_section_offsettop))-500)/st)>0.95){
+                        val.style.transform = 'scale('+((st-((st-third_section_offsettop))-500)/st)+')' 
+                    }
+                    else{
+                        val.style.transform = 'scale(.9)'
+                    }
+                    val.style.opacity = 0.1 + (st/(st-(st-sh)-8000))
+                    
+                })
+            }else{
+                third_section_articles.forEach((val)=>{
+                    val.style.opacity = 0.1 + (st/(st-(st-sh)+2000))
+                    if(((st-((st-third_section_offsettop))-500)/st)==0.8){
+                        val.style.transform = 'scale('+((st-((st-third_section_offsettop))-500)/st)+')' 
+                    }
+                    else{
+                        val.style.transform = 'scale(1.2)'
+                    }
+                })
+            }
+
+            if((st+200)>=fourth_section_offsettop){
+                if(_main.clientWidth<900){
+                    fourth_section_articles.forEach((val)=>{
+                        val.style.transform = 'translateY(-'+(st/25)+'px)'
+                    })
+                }
+                else{
+                    fourth_section_articles.forEach((val)=>{
+                        val.style.transform = 'translateY(-'+(st/15)+'px)'
+                    })
+                }
+            }
+
+            if((st+200)>=fifth_section_offsettop){
+                fifth_section_articles.forEach((val)=>{
+                    if((st+200)>=(val.getAttribute('data-offsetTop'))){
+                        if(((st-((st-fifth_section_offsettop))-500)/st)>0.9){
+                            val.style.transform = 'scale('+((st-((st-fifth_section_offsettop))-500)/st)+')' 
+                        }
+                        else{
+                            val.style.transform = 'scale(.9)'
+                        }
+                        val.style.opacity = 0.1 + (st/(st-(st-sh)-8000))
+                    }
+                    else{
+                        val.style.opacity = 0.1 + (st/(st-(st-sh)+2000))
+                        if(((st-((st-fifth_section_offsettop))-500)/st)==0.8){
+                            val.style.transform = 'scale('+((st-((st-fifth_section_offsettop))-500)/st)+')' 
+                        }
+                        else{
+                            val.style.transform = 'scale(1.2)'
+                        }
+                    }
+                })
+            }
+            if((st+200)>=sixth_section_offsettop){
+                _carousel2_spans.forEach((val)=>{
+                    val.style.opacity = '1'
+                    val.style.transform = 'scale(1)'
+                })
+                _carousel2_strongs.forEach((val)=>{
+                    val.style.opacity = '1'
+                    val.style.transform = 'scale(1)'
+                })
+                _carousel2_divs.forEach((val)=>{
+                    val.style.opacity = '1'
+                    val.style.transform = 'scale(1)'
+                })
+            }
+            if((st+200)>=seventh_section_offsettop){
+                if(((st-((st-seventh_section_offsettop))-500)/st)>0.95){
+                    seventh_section_everything.style.transform = 'scale('+((st-((st-seventh_section_offsettop))-500)/st)+')' 
+                }
+                else{
+                    seventh_section_everything.style.transform = 'scale(.9)'
+                }
+                seventh_section_everything.style.opacity = 0.1 + (st/(st-(st-sh)-8000))
+            }else{
+                seventh_section_everything.style.opacity = 0.1 + (st/(st-(st-sh)+2000))
+                if(((st-((st-seventh_section_offsettop))-500)/st)==0.8){
+                    seventh_section_everything.style.transform = 'scale('+((st-((st-seventh_section_offsettop))-500)/st)+')' 
+                }
+                else{
+                    seventh_section_everything.style.transform = 'scale(1.2)'
+                }
+            }
+            if((st+200)>=eigth_section_offsettop){
+                                
+                if(((st-((st-eigth_section_offsettop))-500)/st)>1){
+                    eigth_section_everything.style.transform = 'scale('+((st-((st-eigth_section_offsettop))-500)/st)+')' 
+                }
+                else{
+                    eigth_section_everything.style.transform = 'scale(1)'
+                }
+                eigth_section_everything.style.opacity = 0.1 + (st/(st-(st-sh)-8000))
+            }else{
+                eigth_section_everything.style.opacity = 0.1 + (st/(st-(st-sh)+2000))
+                if(((st-((st-eigth_section_offsettop))-500)/st)==1){
+                    eigth_section_everything.style.transform = 'scale('+((st-((st-eigth_section_offsettop))-500)/st)+')' 
+                }
+                else{
+                    eigth_section_everything.style.transform = 'scale(1.2)'
+                }
+            }
+
+           
+            
+            st_old = st
+        })
+
+        open_gallery_btn.addEventListener('click',()=>{
+            _slider.style.transform = 'scale(1)'
+        })
+
+        close_gallery_btn.addEventListener('click',()=>{
+            _slider.style.transform = 'scale(0)'
+        })
+
+        _btn_open_close_dropdown_menu.addEventListener('click',()=>{
+            if(_dropdown_menu.getAttribute('data-state')=='closed'){
+                lis_in_dropdown_menu.forEach((val)=>{
+                    val.style.height = '40px'
+                })
+                _header.style.background = 'transparent'
+                _dropdown_menu.style.paddingTop = '100px'
+                _dropdown_menu.setAttribute('data-state','opened')
+            }
+            else{
+                lis_in_dropdown_menu.forEach((val)=>{
+                    val.style.height = 0
+                })
+                _header.style.background = '#2a2a2b6b'
+                _dropdown_menu.style.paddingTop = 0
+                _dropdown_menu.setAttribute('data-state','closed')
+            }
+            
+        })
+
+
+        // slider 2
+        let _box = document.getElementById('main_box')
+        let _carousel = document.getElementById('carousel')
+        let _imgs = document.querySelectorAll('#carousel>div')
+        let _right = document.getElementById('right')
+        let _left = document.getElementById('left')
+        let _list = document.getElementById('list')
+        let img_len = _imgs.length
+        _carousel.style.width = (3*(_main_clientwidth))+'px'
+        let turn = 0
+
+        _imgs.forEach((val)=>{
+            let _circle = document.createElement('li')
+            _circle.classList.add('circle')
+            _list.appendChild(_circle)
+        })
+        let _lis = document.querySelectorAll('#list>li')
+        
+        _lis.forEach((val , i)=>{
+            val.addEventListener('click',(e)=>{
+                _lis.forEach((x)=>{
+                    x.style.background = 'transparent'
+                })
+                e.target.style.background = 'white'
+                turn = i
+                _carousel.style.left = -(turn*600)+'px'
+            })
+        })
+        _lis[turn].style.background = 'white'
+        _right.addEventListener('click',(e)=>{
+            if(turn < (img_len-1)){
+                turn++
+                _carousel.style.left = -(turn*(_main.clientWidth))+'px'
+            }
+            check_li()
+            check_right()
+            check_left()
+            clearInterval(my_interval)
+        })
+
+        _left.addEventListener('click',(e)=>{
+            if(turn > 0){
+                turn--
+                _carousel.style.left = -(turn*(_main.clientWidth))+'px'
+            }
+            check_li()
+            check_left()
+            check_right()
+            clearInterval(my_interval)
+        })
+
+        function check_right(){
+            if(turn==img_len-1){
+                _right.style.opacity = 0
+            }
+            else{
+                _right.style.opacity = 1
+            }
+        }
+        function check_left(){
+            if(turn==0){
+                _left.style.opacity = 0
+            }
+            else{
+                _left.style.opacity = 1
+            }
+        }
+        function check_li(){
+            _lis.forEach((x)=>{
+                x.style.background = 'transparent'
+            })
+            _lis[turn].style.background = 'white'
+        }
+        let state = 'go'
+        let my_interval = setInterval(() => {
+            if((turn < (img_len-1)) && state=='go'){
+                if(turn < (img_len-1)){
+                    turn++
+                    _carousel.style.left = -(turn*(_main.clientWidth))+'px'
+                }
+                check_li()
+                check_right()
+                check_left()
+                }
+            else{
+                state = 'back'
+                if(turn > 0){
+                    turn--
+                    _carousel.style.left = -(turn*(_main.clientWidth))+'px'
+                }
+                check_li()
+                check_left()
+                check_right()
+                if(turn==0){
+                    state = 'go'
+                }
+            }
+        }, 2000);
+      
+    </script>
+    
+</body>
+<script src="js/js.js"></script>
+</html>
