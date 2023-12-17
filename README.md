@@ -1,7 +1,7 @@
 # project11-parallaxWebsite
 https://github.com/katayoon-faraji-web/project11-parallaxWebsite/assets/144775981/2daa54f2-ab91-467d-9fdf-a1f4e7c0f3ec
 
-- [Demo Project](https://katayoon-faraji-web.github.io/trick28-passwordGenerator//)
+- [Demo Project](https://katayoon-faraji-web.github.io/project11-parallaxWebsite/)
 
 - Developed by katayoon faraji
 
